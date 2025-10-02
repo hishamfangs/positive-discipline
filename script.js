@@ -5,7 +5,9 @@ const testimonialDots = document.querySelectorAll('[data-testimonial-dot]');
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('#navMenu');
 const yearSpan = document.getElementById('year');
-const revealElements = document.querySelectorAll('.section, .card, .location-card, .timeline-item, .testimonial');
+const revealElements = document.querySelectorAll(
+  '.section, .card, .approach-card, .gallery-item, .location-card, .timeline-item, .testimonial, .prompt-card'
+);
 
 const autoPlayDelay = 6000;
 let heroIndex = 0;
