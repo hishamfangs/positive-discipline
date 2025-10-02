@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" role="img" aria-labelledby="title desc">
+  <title id="title">Positive Discipline DXB logo</title>
+  <desc id="desc">Circular embrace icon beside the text Positive Discipline DXB</desc>
+  <defs>
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9a76" />
+      <stop offset="100%" stop-color="#1f7a8c" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#144552" />
+      <stop offset="100%" stop-color="#0b2c3d" />
+    </linearGradient>
+  </defs>
+  <g fill="none" transform="translate(18 8)">
+    <path d="M48 32c0 17.673-14.327 32-32 32S-16 49.673-16 32-1.673 0 16 0s32 14.327 32 32Z" stroke="url(#ringGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M15 22c2.4-4 8.6-4 11 0" stroke="#ff8360" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M8 38c4 6 16 6 20 0" stroke="#1f7a8c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="10" cy="16" r="6" fill="#ff8360" />
+    <circle cx="28" cy="16" r="6" fill="#1f7a8c" />
+  </g>
+  <g fill="url(#textGradient)" font-family="'Playfair Display', 'Georgia', serif" font-weight="600">
+    <text font-size="28" x="96" y="38">Positive</text>
+    <text font-size="24" x="96" y="62">Discipline DXB</text>
+  </g>
+</svg>
