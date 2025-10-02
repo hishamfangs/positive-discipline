@@ -14,6 +14,7 @@ let heroInterval;
 let testimonialInterval;
 
 function setActiveSlide(index) {
+  if (!heroSlides.length) return;
   heroSlides.forEach((slide, i) => {
     slide.classList.toggle('active', i === index);
   });
@@ -25,11 +26,13 @@ function setActiveSlide(index) {
 }
 
 function nextHeroSlide() {
+  if (heroSlides.length <= 1) return;
   const nextIndex = (heroIndex + 1) % heroSlides.length;
   setActiveSlide(nextIndex);
 }
 
 function setActiveTestimonial(index) {
+  if (!testimonials.length) return;
   testimonials.forEach((testimonial, i) => {
     testimonial.classList.toggle('active', i === index);
   });
@@ -41,13 +44,18 @@ function setActiveTestimonial(index) {
 }
 
 function nextTestimonial() {
+  if (testimonials.length <= 1) return;
   const nextIndex = (testimonialIndex + 1) % testimonials.length;
   setActiveTestimonial(nextIndex);
 }
 
 function startIntervals() {
-  heroInterval = setInterval(nextHeroSlide, autoPlayDelay);
-  testimonialInterval = setInterval(nextTestimonial, autoPlayDelay + 2000);
+  if (heroSlides.length > 1) {
+    heroInterval = setInterval(nextHeroSlide, autoPlayDelay);
+  }
+  if (testimonials.length > 1) {
+    testimonialInterval = setInterval(nextTestimonial, autoPlayDelay + 2000);
+  }
 }
 
 function resetIntervals() {
