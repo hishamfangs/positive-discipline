@@ -1,0 +1,26 @@
+<svg width="320" height="120" viewBox="0 0 320 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Positive Discipline DXB logo</title>
+  <desc id="logoDesc">Two abstract figures embracing within a circle beside the words Positive Discipline DXB</desc>
+  <defs>
+    <linearGradient id="ringGradient" x1="15" y1="20" x2="105" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9C7B" />
+      <stop offset="1" stop-color="#1F7A8C" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="130" y1="30" x2="310" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#144552" />
+      <stop offset="1" stop-color="#6E44FF" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(10 10)">
+    <circle cx="70" cy="50" r="46" stroke="url(#ringGradient)" stroke-width="12" fill="none" stroke-linecap="round" />
+    <path d="M46 58C53 63 61 65 70 65C79 65 87 63 94 58" stroke="#FF8360" stroke-width="8" stroke-linecap="round" />
+    <path d="M58 40C60 34 66 32 70 32C74 32 80 34 82 40" stroke="#1F7A8C" stroke-width="8" stroke-linecap="round" />
+    <circle cx="57" cy="28" r="8" fill="#FF9C7B" />
+    <circle cx="83" cy="28" r="8" fill="#6E44FF" />
+  </g>
+  <g transform="translate(140 36)" fill="url(#textGradient)" font-family="'Playfair Display', 'Georgia', serif">
+    <text font-size="32" font-weight="700">Positive</text>
+    <text y="36" font-size="32" font-weight="700">Discipline</text>
+  </g>
+  <text x="140" y="100" fill="#1F2933" font-family="'Nunito', 'Arial', sans-serif" font-size="22" font-weight="700">DXB</text>
+</svg>
