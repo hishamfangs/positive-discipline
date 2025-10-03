@@ -1,119 +1,30 @@
-const heroSlides = document.querySelectorAll('[data-hero-slide]');
-const heroDots = document.querySelectorAll('[data-hero-dot]');
-const testimonials = document.querySelectorAll('[data-testimonial]');
-const testimonialDots = document.querySelectorAll('[data-testimonial-dot]');
 const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('#navMenu');
+const siteNav = document.getElementById('primaryNav');
 const yearSpan = document.getElementById('year');
-const revealElements = document.querySelectorAll('.section, .card, .location-card, .timeline-item, .testimonial');
 
-const autoPlayDelay = 6000;
-let heroIndex = 0;
-let testimonialIndex = 0;
-let heroInterval;
-let testimonialInterval;
-
-function setActiveSlide(index) {
-  if (!heroSlides.length) return;
-  heroSlides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
-  heroDots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-    dot.setAttribute('aria-current', i === index ? 'true' : 'false');
-  });
-  heroIndex = index;
-}
-
-function nextHeroSlide() {
-  if (heroSlides.length <= 1) return;
-  const nextIndex = (heroIndex + 1) % heroSlides.length;
-  setActiveSlide(nextIndex);
-}
-
-function setActiveTestimonial(index) {
-  if (!testimonials.length) return;
-  testimonials.forEach((testimonial, i) => {
-    testimonial.classList.toggle('active', i === index);
-  });
-  testimonialDots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-    dot.setAttribute('aria-current', i === index ? 'true' : 'false');
-  });
-  testimonialIndex = index;
-}
-
-function nextTestimonial() {
-  if (testimonials.length <= 1) return;
-  const nextIndex = (testimonialIndex + 1) % testimonials.length;
-  setActiveTestimonial(nextIndex);
-}
-
-function startIntervals() {
-  if (heroSlides.length > 1) {
-    heroInterval = setInterval(nextHeroSlide, autoPlayDelay);
-  }
-  if (testimonials.length > 1) {
-    testimonialInterval = setInterval(nextTestimonial, autoPlayDelay + 2000);
-  }
-}
-
-function resetIntervals() {
-  clearInterval(heroInterval);
-  clearInterval(testimonialInterval);
-  startIntervals();
-}
-
-heroDots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    setActiveSlide(index);
-    resetIntervals();
-  });
-});
-
-testimonialDots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    setActiveTestimonial(index);
-    resetIntervals();
-  });
-});
-
-if (navToggle) {
+if (navToggle && siteNav) {
   navToggle.addEventListener('click', () => {
-    const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
     navToggle.setAttribute('aria-expanded', String(!expanded));
-    navMenu.classList.toggle('open');
+    siteNav.classList.toggle('open');
   });
 
-  navMenu.querySelectorAll('a').forEach((link) => {
+  siteNav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       navToggle.setAttribute('aria-expanded', 'false');
-      navMenu.classList.remove('open');
+      siteNav.classList.remove('open');
     });
   });
+
+  document.addEventListener('keyup', (event) => {
+    if (event.key === 'Escape' && siteNav.classList.contains('open')) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      siteNav.classList.remove('open');
+      navToggle.focus();
+    }
+  });
 }
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.2,
-  }
-);
-
-revealElements.forEach((element) => {
-  element.classList.add('reveal');
-  observer.observe(element);
-});
 
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
-
-startIntervals();
