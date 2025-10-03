@@ -34,10 +34,10 @@
 
 		<main>
 			<section id="hero" class="hero">
-				<div class="hero-content" style="display: inline-block">
-					<div style="width: 451px; display: inline-block">
+				<div class="hero-content" style="/* display: inline-block; */">
+					<div style="width: 100%; display: inline-block">
 						<img src="./assets/logo.png" class="logo" style="" />
-						<div class="hero-content" style="width: 400px">
+						<div class="hero-content" style="/* width: 400px; */">
 							<p class="hero-kicker">Fun · Kind · Caring · Professional</p>
 							<p>
 								Join educator <strong>Nagwa El Saadani</strong> for uplifting, evidence-based Positive Discipline sessions that empower families with respect,
@@ -67,9 +67,21 @@
 				</div>
 				<div class="hero-illustration" aria-hidden="true">
 					<div class="map-card">
+						<div class="map-gradient"></div>
+						<div
+							class="map-gradient second"
+							style="
+								width: 90%;
+								height: 90%;
+								margin: auto;
+								background: url(/assets/photo.jpg);
+								border-radius: 14px;
+								background-size: cover;
+								background-position: center;
+							"
+						></div>
 						<div class="map-cloud map-cloud--one"></div>
 						<div class="map-cloud map-cloud--two"></div>
-						<div class="map-gradient"></div>
 						<div class="map-pin map-pin--dubai">
 							<span>Dubai</span>
 						</div>
