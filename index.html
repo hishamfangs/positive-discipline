@@ -5,445 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Positive Discipline DXB workshops with Nagwa El Saadani in Dubai and Cairo. Compassionate, professional training for parents, educators, and teams."
+      content="Positive Discipline DXB workshops with Nagwa El Saadani in Dubai, UAE and Cairo, Egypt. Fun, caring, and professional parenting guidance for families of all ages."
     />
-    <title>Positive Discipline DXB | Workshops with Nagwa El Saadani</title>
+    <title>Positive Discipline DXB</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="logo" href="#hero" aria-label="Positive Discipline DXB home">
-        <img src="assets/positive-discipline-dxb-logo.svg" alt="Positive Discipline DXB logo" />
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu">
+    <a class="skip-link" href="#hero">Skip to content</a>
+    <header class="site-header" aria-label="Main navigation">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <span class="brand-circle"></span>
+          <span class="brand-circle"></span>
+          <span class="brand-circle"></span>
+        </div>
+        <div class="brand-copy">
+          <span class="brand-name">Positive Discipline DXB</span>
+          <span class="brand-tag">with Nagwa El Saadani</span>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav">
         <span></span>
         <span></span>
         <span></span>
-        <span class="visually-hidden">Toggle navigation</span>
+        <span class="visually-hidden">Open navigation</span>
       </button>
-      <nav id="navMenu" class="site-nav">
+      <nav id="primaryNav" class="site-nav">
         <ul>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About Nagwa</a></li>
           <li><a href="#workshops">Workshops</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#locations">Locations</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
+        <a class="btn btn-contact" href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
       <section id="hero" class="hero">
-        <div class="hero-slider" aria-label="Positive Discipline highlights">
-          <article class="hero-slide active" data-hero-slide>
-            <div class="hero-media hero-media--sunrise" aria-hidden="true"></div>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-              <p class="hero-badge">Kind &amp; Firm Parenting</p>
-              <h1>Joyful, Confident Families Begin with Positive Discipline</h1>
-              <p>
-                Join Nagwa El Saadani’s uplifting workshops to cultivate calm homes, connected classrooms, and compassionate
-                workplaces.
-              </p>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="#contact">Reserve Your Spot</a>
-                <a class="btn btn-link" href="#workshops">Browse Tracks</a>
-              </div>
+        <div class="hero-content">
+          <p class="hero-kicker">Fun · Kind · Caring · Professional</p>
+          <h1>Positive Discipline Workshops for Parents in Dubai &amp; Cairo</h1>
+          <p>
+            Join educator <strong>Nagwa El Saadani</strong> for uplifting, evidence-based Positive Discipline sessions that
+            empower families with respect, connection, and joyful cooperation.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Reserve your spot</a>
+            <a class="btn btn-secondary" href="#workshops">Explore workshops</a>
+          </div>
+          <dl class="hero-highlights">
+            <div>
+              <dt>Parents of all ages</dt>
+              <dd>Toddlers, tweens, and teens welcome</dd>
             </div>
-          </article>
-          <article class="hero-slide" data-hero-slide>
-            <div class="hero-media hero-media--waves" aria-hidden="true"></div>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-              <p class="hero-badge">Professional &amp; Playful</p>
-              <h1>Evidence-Based Tools for Caring, Confident Leadership</h1>
-              <p>
-                Experience interactive sessions filled with role-play, reflection, and practical strategies you can apply
-                immediately.
-              </p>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="#experience">See the Experience</a>
-                <a class="btn btn-link" href="#schedule">Upcoming Dates</a>
-              </div>
+            <div>
+              <dt>Locations</dt>
+              <dd>Dubai, UAE &amp; Cairo, Egypt</dd>
             </div>
-          </article>
-          <article class="hero-slide" data-hero-slide>
-            <div class="hero-media hero-media--galaxy" aria-hidden="true"></div>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-              <p class="hero-badge">Dubai &amp; Cairo</p>
-              <h1>Building Caring Communities Across the Middle East</h1>
-              <p>
-                Connect with parents, educators, and teams who believe in raising capable, empathetic children through mutual
-                respect.
-              </p>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="#locations">Explore Venues</a>
-                <a class="btn btn-link" href="#testimonials">Hear the Stories</a>
-              </div>
+            <div>
+              <dt>Approach</dt>
+              <dd>Respect, encouragement, and practical tools</dd>
             </div>
-          </article>
+          </dl>
         </div>
-        <div class="hero-controls" aria-hidden="true">
-          <button class="hero-dot active" data-hero-dot aria-label="Go to slide 1"></button>
-          <button class="hero-dot" data-hero-dot aria-label="Go to slide 2"></button>
-          <button class="hero-dot" data-hero-dot aria-label="Go to slide 3"></button>
+        <div class="hero-illustration" aria-hidden="true">
+          <div class="map-card">
+            <div class="map-cloud map-cloud--one"></div>
+            <div class="map-cloud map-cloud--two"></div>
+            <div class="map-gradient"></div>
+            <div class="map-pin map-pin--dubai">
+              <span>Dubai</span>
+            </div>
+            <div class="map-pin map-pin--cairo">
+              <span>Cairo</span>
+            </div>
+            <div class="map-heart">&hearts;</div>
+          </div>
+          <div class="hero-bubble hero-bubble--one">Joyful connections</div>
+          <div class="hero-bubble hero-bubble--two">Kind &amp; firm</div>
+          <div class="hero-bubble hero-bubble--three">Community matters</div>
         </div>
       </section>
 
       <section id="about" class="section about">
-        <div class="section-intro">
-          <p class="eyebrow">Meet the Educator</p>
-          <h2 class="section-title">Nagwa El Saadani</h2>
-          <p class="section-subtitle">Positive Discipline Trainer, Mother, and Community Builder</p>
+        <div class="section-heading">
+          <p class="eyebrow">Meet Nagwa</p>
+          <h2>About Nagwa El Saadani</h2>
+          <p>
+            Nagwa is a certified Positive Discipline educator committed to helping parents nurture confident, cooperative
+            children through playful learning and compassionate leadership.
+          </p>
         </div>
         <div class="about-grid">
-          <div class="about-media" aria-hidden="true">
-            <div class="about-photo about-photo--primary"></div>
-            <div class="about-photo about-photo--secondary"></div>
-            <div class="about-card">
-              <p>“When adults feel supported, children feel seen.”</p>
-              <span>— Nagwa</span>
+          <div class="about-card">
+            <div class="about-portrait" aria-hidden="true">
+              <div class="portrait-inner"></div>
             </div>
-          </div>
-          <div class="about-content">
-            <p>
-              Nagwa El Saadani is a certified Positive Discipline educator with more than a decade of experience guiding families
-              and professionals across Dubai and Cairo. Her workshops blend joyful facilitation with practical frameworks so every
-              participant leaves empowered to respond with kindness, clarity, and courage.
-            </p>
-            <ul class="about-highlights">
-              <li><strong>12+ years</strong> coaching families, schools, and corporate teams</li>
-              <li><strong>Bilingual delivery</strong> with cultural insight for the UAE &amp; Egypt</li>
-              <li><strong>Positive Discipline Association</strong> certified trainer and mentor</li>
+            <ul class="about-list">
+              <li>Certified Positive Discipline Parent Educator</li>
+              <li>Serving families across Dubai &amp; Cairo</li>
+              <li>Workshops tailored for toddlers to teens</li>
+              <li>Sessions in English &amp; Arabic</li>
             </ul>
-            <div class="about-metrics">
-              <div class="metric">
-                <span class="metric-number">2K+</span>
-                <span class="metric-label">Families supported</span>
-              </div>
-              <div class="metric">
-                <span class="metric-number">150+</span>
-                <span class="metric-label">Schools &amp; nurseries trained</span>
-              </div>
-              <div class="metric">
-                <span class="metric-number">30+</span>
-                <span class="metric-label">Corporate wellbeing labs</span>
-              </div>
-            </div>
+          </div>
+          <div class="about-story">
+            <h3>Warm, respectful guidance for the whole family</h3>
+            <p>
+              With more than a decade of experience, Nagwa blends evidence-based tools with heartfelt facilitation. Her sessions
+              invite laughter, reflection, and practical strategies so every parent leaves feeling supported and confident.
+            </p>
+            <blockquote>
+              “When parents feel empowered, children flourish in connection and respect.”
+              <cite>&mdash; Nagwa El Saadani</cite>
+            </blockquote>
           </div>
         </div>
       </section>
 
       <section id="workshops" class="section workshops">
-        <div class="section-intro">
-          <p class="eyebrow">Choose Your Journey</p>
-          <h2 class="section-title">Signature Workshop Tracks</h2>
-          <p class="section-subtitle">Designed to be fun, compassionate, and deeply practical.</p>
+        <div class="section-heading">
+          <p class="eyebrow">Workshop Journey</p>
+          <h2>Choose the track that fits your family</h2>
+          <p>Interactive, playful sessions designed for every stage of childhood.</p>
         </div>
-        <div class="card-grid">
-          <article class="card">
-            <div class="card-media card-media--parents" aria-hidden="true"></div>
-            <div class="card-body">
-              <h3>Parents of Young Explorers</h3>
-              <p>
-                Build routines rooted in respect and empathy while discovering playful tools to guide toddlers and preschoolers.
-              </p>
-              <ul>
-                <li>Emotion coaching &amp; connection rituals</li>
-                <li>Calm communication scripts</li>
-                <li>Family agreements that stick</li>
-              </ul>
-            </div>
-            <footer>
-              <span class="tag">Dubai · Saturdays</span>
-              <a class="btn btn-secondary" href="#contact">Get Agenda</a>
-            </footer>
-          </article>
-          <article class="card">
-            <div class="card-media card-media--educators" aria-hidden="true"></div>
-            <div class="card-body">
-              <h3>Schools &amp; Educators</h3>
-              <p>
-                Equip teaching teams with classroom strategies that honour student dignity and spark collaborative learning.
-              </p>
-              <ul>
-                <li>Restorative conversations</li>
-                <li>Encouragement vs. praise</li>
-                <li>Class meetings that shine</li>
-              </ul>
-            </div>
-            <footer>
-              <span class="tag">Cairo · Weekdays</span>
-              <a class="btn btn-secondary" href="#contact">Get Agenda</a>
-            </footer>
-          </article>
-          <article class="card">
-            <div class="card-media card-media--corporate" aria-hidden="true"></div>
-            <div class="card-body">
-              <h3>Corporate Wellbeing</h3>
-              <p>
-                Translate Positive Discipline principles into supportive workplace cultures that value empathy and accountability.
-              </p>
-              <ul>
-                <li>Mindful leadership labs</li>
-                <li>Inclusive team agreements</li>
-                <li>Hybrid harmony workshops</li>
-              </ul>
-            </div>
-            <footer>
-              <span class="tag">Dubai &amp; Cairo</span>
-              <a class="btn btn-secondary" href="#contact">Get Agenda</a>
-            </footer>
-          </article>
-        </div>
-      </section>
-
-      <section id="experience" class="section experience">
-        <div class="experience-grid">
-          <div class="experience-content">
-            <p class="eyebrow">Inside the Room</p>
-            <h2 class="section-title">What to Expect</h2>
-            <p>
-              Every Positive Discipline DXB workshop is a vibrant blend of storytelling, coaching, and play-based discovery. Nagwa
-              creates warm spaces where adults laugh, practise, and leave with tools they can apply that same evening.
-            </p>
-            <ul class="experience-list">
-              <li><strong>Interactive labs</strong> that turn theory into lived skills.</li>
-              <li><strong>Community circles</strong> to swap wins, worries, and wisdom.</li>
-              <li><strong>Action plans</strong> tailored to your child, classroom, or team.</li>
+        <div class="workshop-grid">
+          <article class="workshop-card">
+            <h3>Toddlers</h3>
+            <p>Build routines with kindness, manage big feelings, and create safe boundaries for little explorers.</p>
+            <ul>
+              <li>Playful role play &amp; songs</li>
+              <li>Positive routines toolkit</li>
+              <li>Parent support circle</li>
             </ul>
-            <a class="btn btn-primary" href="#testimonials">See the Impact</a>
-          </div>
-          <div class="experience-gallery" aria-label="Workshop snapshots">
-            <div class="experience-photo experience-photo--one"></div>
-            <div class="experience-photo experience-photo--two"></div>
-            <div class="experience-photo experience-photo--three"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="locations" class="section locations">
-        <div class="section-intro">
-          <p class="eyebrow">Two Vibrant Cities</p>
-          <h2 class="section-title">Where We Gather</h2>
-          <p class="section-subtitle">Experience Positive Discipline in dynamic hubs across the UAE and Egypt.</p>
-        </div>
-        <div class="locations-grid">
-          <article class="location-card">
-            <div class="location-visual location-visual--dubai" aria-hidden="true"></div>
-            <div class="location-content">
-              <h3>Dubai</h3>
-              <p>Studio-style venues across Dubai Marina, Downtown, and Jumeirah designed for play and reflection.</p>
-              <ul>
-                <li>Parent intensives &amp; playgroups</li>
-                <li>Corporate lunch &amp; learns</li>
-                <li>School partnerships</li>
-              </ul>
-            </div>
           </article>
-          <article class="location-card">
-            <div class="location-visual location-visual--cairo" aria-hidden="true"></div>
-            <div class="location-content">
-              <h3>Cairo</h3>
-              <p>Community-driven workshops in Zamalek, New Cairo, and Maadi with hybrid delivery options.</p>
-              <ul>
-                <li>Educator professional development</li>
-                <li>Weekend family retreats</li>
-                <li>Parent coaching circles</li>
-              </ul>
-            </div>
+          <article class="workshop-card">
+            <h3>Children</h3>
+            <p>Encourage responsibility, cooperation, and problem-solving through respectful leadership.</p>
+            <ul>
+              <li>Collaborative family meetings</li>
+              <li>Kind &amp; firm communication</li>
+              <li>Connection-based discipline</li>
+            </ul>
+          </article>
+          <article class="workshop-card">
+            <h3>Teens</h3>
+            <p>Navigate independence with empathy, shared agreements, and tools for calm conversations.</p>
+            <ul>
+              <li>Coaching mindset for parents</li>
+              <li>Mutual respect agreements</li>
+              <li>Future-ready resilience skills</li>
+            </ul>
           </article>
         </div>
       </section>
 
       <section id="testimonials" class="section testimonials">
-        <div class="section-intro">
-          <p class="eyebrow">Community Voices</p>
-          <h2 class="section-title">Love Letters from Graduates</h2>
-          <p class="section-subtitle">Caring reflections from parents, teachers, and leaders.</p>
+        <div class="section-heading">
+          <p class="eyebrow">Kind words</p>
+          <h2>Families share their experience</h2>
+          <p>Parents leave feeling seen, supported, and ready to lead with love.</p>
         </div>
-        <div class="testimonial-slider" aria-live="polite">
-          <article class="testimonial active" data-testimonial>
-            <p class="testimonial-quote">“Nagwa’s warmth gave us the courage to parent with empathy and joy again.”</p>
-            <p class="testimonial-author">Mona · Parent of Two</p>
-          </article>
-          <article class="testimonial" data-testimonial>
-            <p class="testimonial-quote">“Our staff speak with kindness while holding clear boundaries—classrooms feel lighter.”</p>
-            <p class="testimonial-author">Mr. Khaled · School Principal</p>
-          </article>
-          <article class="testimonial" data-testimonial>
-            <p class="testimonial-quote">“The corporate labs transformed how we celebrate wins and navigate feedback together.”</p>
-            <p class="testimonial-author">Sara · People &amp; Culture Lead</p>
-          </article>
-        </div>
-        <div class="testimonial-controls" aria-hidden="true">
-          <button class="testimonial-dot active" data-testimonial-dot aria-label="Go to testimonial 1"></button>
-          <button class="testimonial-dot" data-testimonial-dot aria-label="Go to testimonial 2"></button>
-          <button class="testimonial-dot" data-testimonial-dot aria-label="Go to testimonial 3"></button>
-        </div>
-      </section>
-
-      <section id="schedule" class="section schedule">
-        <div class="section-intro">
-          <p class="eyebrow">Upcoming Gatherings</p>
-          <h2 class="section-title">Spring &amp; Summer Dates</h2>
-          <p class="section-subtitle">Flexible options designed for caregivers, educators, and teams.</p>
-        </div>
-        <div class="timeline" role="list">
-          <div class="timeline-item" role="listitem">
-            <span class="timeline-date">April 12 · Dubai Marina</span>
-            <div>
-              <h3>Parents of Young Explorers</h3>
-              <p>Morning immersion with play-based coaching.</p>
-            </div>
-          </div>
-          <div class="timeline-item" role="listitem">
-            <span class="timeline-date">April 20 · Cairo</span>
-            <div>
-              <h3>Educators Lab</h3>
-              <p>Full-day professional development in Zamalek.</p>
-            </div>
-          </div>
-          <div class="timeline-item" role="listitem">
-            <span class="timeline-date">May 4 · Hybrid</span>
-            <div>
-              <h3>Corporate Wellbeing Sprint</h3>
-              <p>Afternoon session for Dubai &amp; Cairo teams.</p>
-            </div>
-          </div>
-          <div class="timeline-item" role="listitem">
-            <span class="timeline-date">May 18 · New Cairo</span>
-            <div>
-              <h3>Positive Discipline Family Retreat</h3>
-              <p>Weekend getaway with coaching circles &amp; play labs.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section gallery">
-        <div class="section-intro">
-          <p class="eyebrow">Life in the Workshop</p>
-          <h2 class="section-title">Snapshots of Connection</h2>
-          <p class="section-subtitle">Modern, lifestyle moments that capture the kindness and joy of learning together.</p>
-        </div>
-        <div class="gallery-grid" aria-label="Lifestyle imagery">
-          <figure class="gallery-item gallery-item--one">
-            <figcaption>Parents practising encouragement tools.</figcaption>
+        <div class="testimonial-grid">
+          <figure class="testimonial-card">
+            <blockquote>
+              “Nagwa’s warmth and playfulness made every session engaging. Our home is calmer and more connected.”
+            </blockquote>
+            <figcaption>— Sarah, mother of two</figcaption>
           </figure>
-          <figure class="gallery-item gallery-item--two">
-            <figcaption>Educators celebrating classroom wins.</figcaption>
+          <figure class="testimonial-card">
+            <blockquote>
+              “These workshops gave us practical tools that respect our teen’s voice while keeping family values strong.”
+            </blockquote>
+            <figcaption>— Ahmed &amp; Lina, parents of a teen</figcaption>
           </figure>
-          <figure class="gallery-item gallery-item--three">
-            <figcaption>Playful group activity in Dubai.</figcaption>
-          </figure>
-          <figure class="gallery-item gallery-item--four">
-            <figcaption>Reflective coaching circle in Cairo.</figcaption>
+          <figure class="testimonial-card">
+            <blockquote>
+              “I finally feel confident setting boundaries with kindness. The community support was priceless.”
+            </blockquote>
+            <figcaption>— Mariam, toddler parent</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="section faq" id="faq">
-        <div class="section-intro">
-          <p class="eyebrow">Curious Minds</p>
-          <h2 class="section-title">Frequently Asked Questions</h2>
+      <section id="contact" class="section contact">
+        <div class="contact-card">
+          <div class="section-heading">
+            <p class="eyebrow">Let’s connect</p>
+            <h2>Ready to join a Positive Discipline workshop?</h2>
+            <p>
+              Share a few details and we’ll reach out with schedules in Dubai and Cairo, or email
+              <a href="mailto:hello@positivedisciplinedxb.com">hello@positivedisciplinedxb.com</a> directly.
+            </p>
+          </div>
+          <form class="contact-form" action="#" method="post">
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              Workshop interest
+              <select name="interest" required>
+                <option value="" disabled selected>Select a track</option>
+                <option value="toddlers">Toddlers</option>
+                <option value="children">Children</option>
+                <option value="teens">Teens</option>
+                <option value="private">Private / Custom</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Tell us about your family and goals"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
         </div>
-        <div class="faq-list">
-          <details>
-            <summary>Who should attend the workshops?</summary>
-            <p>Parents, caregivers, teachers, school leaders, and corporate teams who value respectful, strengths-based guidance.</p>
-          </details>
-          <details>
-            <summary>Do you offer private or in-house sessions?</summary>
-            <p>Yes! Nagwa tailors positive discipline intensives for schools, nurseries, and organisations in both Dubai and Cairo.</p>
-          </details>
-          <details>
-            <summary>What languages are the workshops delivered in?</summary>
-            <p>Sessions are available in English and Arabic with culturally responsive examples for each community.</p>
-          </details>
-        </div>
-      </section>
-
-      <section id="contact" class="section cta">
-        <div class="cta-content">
-          <p class="eyebrow">Let’s Begin</p>
-          <h2 class="section-title">Join the Positive Discipline Journey</h2>
-          <p>Share a few details and we’ll connect you with the workshop track that fits your family or team.</p>
-        </div>
-        <form class="cta-form" action="#" method="post">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your name" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com" />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Include country code" />
-          </div>
-          <div class="form-group">
-            <label for="city">Preferred City</label>
-            <select id="city" name="city">
-              <option value="Dubai">Dubai</option>
-              <option value="Cairo">Cairo</option>
-              <option value="Hybrid">Hybrid / Online</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="session">Session Focus</label>
-            <select id="session" name="session">
-              <option value="Parents">Parents</option>
-              <option value="Educators">Educators</option>
-              <option value="Corporate">Corporate Teams</option>
-              <option value="Custom">Custom Program</option>
-            </select>
-          </div>
-          <div class="form-group form-group--full">
-            <label for="message">How can we support you?</label>
-            <textarea id="message" name="message" rows="4" placeholder="Share goals, questions, or preferred dates."></textarea>
-          </div>
-          <button class="btn btn-primary" type="submit">Submit Inquiry</button>
-          <p class="form-note">We respond with warmth within 2 business days.</p>
-        </form>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-brand">
-        <img src="assets/positive-discipline-dxb-logo.svg" alt="Positive Discipline DXB logo" />
-        <p class="footer-mission">Kind, caring, and professional guidance for families, schools, and teams.</p>
-      </div>
-      <div class="footer-contact">
-        <h3>Connect</h3>
-        <ul>
-          <li><a href="mailto:hello@positivedisciplinedxb.com">hello@positivedisciplinedxb.com</a></li>
-          <li><a href="tel:+971555555555">+971 55 555 5555</a></li>
-          <li><a href="tel:+201055555555">+20 105 555 5555</a></li>
-        </ul>
-        <div class="social-links" aria-label="Social media">
-          <a href="#">Instagram</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Facebook</a>
-        </div>
-      </div>
-      <div class="footer-credits">
-        <h3>Certified Educator</h3>
-        <p>Member of the Positive Discipline Association · Serving Dubai &amp; Cairo</p>
-        <p class="footer-copy">© <span id="year"></span> Positive Discipline DXB. All rights reserved.</p>
-      </div>
+      <p>&copy; <span id="year"></span> Positive Discipline DXB · Crafted with care in Dubai &amp; Cairo.</p>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>
