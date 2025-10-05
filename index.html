@@ -24,8 +24,8 @@
 			</button>
 			<nav id="primaryNav" class="site-nav">
 				<ul>
-					<li><a href="#about">About Nagwa</a></li>
 					<li><a href="#workshops">Workshops</a></li>
+					<li><a href="#about">About Nagwa</a></li>
 					<li><a href="#testimonials">Testimonials</a></li>
 				</ul>
 				<a class="btn-contact" href="#contact"></a>
@@ -103,6 +103,63 @@
 				</div>
 			</section>
 
+
+			<section id="workshops" class="section workshops">
+				<div class="section-heading">
+					<p class="eyebrow">Workshop Options</p>
+					<h2>Workshops</h2>
+					<p>Choose the workshop format that works best for your family and schedule.</p>
+				</div>
+				<div class="workshop-grid">
+					<article class="workshop-card" data-workshop="parenting-workshops">
+						<div class="workshop-icon">
+							
+						</div>
+						<h3>Parenting Workshops</h3>
+						<p>Get introduced to Positive Discipline principles through our complimentary introductory sessions. Perfect for parents new to the approach who want to experience our teaching style and community.</p>
+						<ul>
+							<li>Overview of Positive Discipline fundamentals</li>
+							<li>Basic tools and strategies</li>
+							<li>Meet other like-minded parents</li>
+							<li>No cost - just your time and commitment</li>
+						</ul>
+						<button class="btn btn-primary workshop-cta">Book Free Workshop</button>
+					</article>
+					<!-- <article class="workshop-card" data-workshop="free-intro">
+						<div class="workshop-icon">
+							<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="24" cy="24" r="20" fill="#1f8a89" opacity="0.1"/>
+								<path d="M18 32h12l-6-16-6 16zm3-8h6m-3-8v16" stroke="#1f8a89" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<circle cx="36" cy="12" r="6" fill="#f07f6a"/>
+								<text x="36" y="16" text-anchor="middle" fill="white" font-size="8" font-weight="bold">FREE</text>
+							</svg>
+						</div>
+						<h3>Free Introductory Workshops</h3>
+						<p>Get introduced to Positive Discipline principles through our complimentary introductory sessions. Perfect for parents new to the approach who want to experience our teaching style and community.</p>
+						<ul>
+							<li>Overview of Positive Discipline fundamentals</li>
+							<li>Basic tools and strategies</li>
+							<li>Meet other like-minded parents</li>
+							<li>No cost - just your time and commitment</li>
+						</ul>
+						<button class="btn btn-primary workshop-cta">Book Free Workshop</button>
+					</article> -->
+					<article class="workshop-card" data-workshop="school-workshop">
+						<div class="workshop-icon">
+							
+						</div>
+						<h3>Parent Workshops at Your School</h3>
+						<p>Bring Positive Discipline directly to your school community! We offer comprehensive parent workshops tailored to your school's needs, creating a consistent approach between home and school.</p>
+						<ul>
+							<li>Customized curriculum for your community</li>
+							<li>On-site delivery at your school</li>
+							<li>Multiple session formats available</li>
+							<li>Teacher collaboration opportunities</li>
+						</ul>
+						<button class="btn btn-primary workshop-cta">Inquire for Your School</button>
+					</article>
+				</div>
+			</section>
 			<section id="about" class="section about">
 				<div class="section-heading">
 					<p class="eyebrow">Meet Nagwa</p>
@@ -135,65 +192,114 @@
 					</div>
 				</div>
 			</section>
+			<section id="illustration" style="margin-top: -469px;margin-left: -65px"><img src="./assets/nagwa-illustration2.png"></section>			
 			<section id="testimonials" class="section testimonials">
-				<div class="section-heading" style="display: none;">
-					<p class="eyebrow">Kind words</p>
-					<h2>Families share their experience</h2>
-					<p>Parents leave feeling seen, supported, and ready to lead with love.</p>
-				</div>
-				<div class="testimonial-grid">
-					<figure class="testimonial-card">
-						<blockquote>“Nagwa’s warmth and playfulness made every session engaging. Our home is calmer and more connected.”</blockquote>
-						<figcaption>— Sarah, mother of two</figcaption>
-					</figure>
-					<figure class="testimonial-card">
-						<blockquote>“These workshops gave us practical tools that respect our teen’s voice while keeping family values strong.”</blockquote>
-						<figcaption>— Ahmed &amp; Lina, parents of a teen</figcaption>
-					</figure>
-					<figure class="testimonial-card">
-						<blockquote>“I finally feel confident setting boundaries with kindness. The community support was priceless.”</blockquote>
-						<figcaption>— Mariam, toddler parent</figcaption>
-					</figure>
-				</div>
+							<div class="section-heading" style="display: none;">
+								<p class="eyebrow">Kind words</p>
+								<h2>Families share their experience</h2>
+								<p>Parents leave feeling seen, supported, and ready to lead with love.</p>
+							</div>
+							<div class="testimonial-grid">
+								<figure class="testimonial-card">
+									<blockquote>“Nagwa’s warmth and playfulness made every session engaging. Our home is calmer and more connected.”</blockquote>
+									<figcaption>— Sarah, mother of two</figcaption>
+								</figure>
+								<figure class="testimonial-card">
+									<blockquote>“These workshops gave us practical tools that respect our teen’s voice while keeping family values strong.”</blockquote>
+									<figcaption>— Ahmed &amp; Lina, parents of a teen</figcaption>
+								</figure>
+								<figure class="testimonial-card">
+									<blockquote>“I finally feel confident setting boundaries with kindness. The community support was priceless.”</blockquote>
+									<figcaption>— Mariam, toddler parent</figcaption>
+								</figure>
+							</div>
 			</section>
-			<section id="illustration" style="margin-top: -769px; margin-left: -65px"><img src="./assets/nagwa-illustration2.png" /></section>
 
-			<section id="workshops" class="section workshops">
-				<div class="section-heading">
-					<p class="eyebrow">Workshop Journey</p>
-					<h2>Choose the track that fits your family</h2>
-					<p>Interactive, playful sessions designed for every stage of childhood.</p>
+			<!-- Modal Forms -->
+			<div id="free-workshop-modal" class="modal-overlay">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Book Free Introductory Workshop</h3>
+						<button class="modal-close" aria-label="Close modal">&times;</button>
+					</div>
+					<form class="modal-form" id="free-workshop-form">
+						<div class="form-row">
+							<label>
+								Select Preferred Date
+								<select name="date" required>
+									<option value="" disabled selected>Choose a date</option>
+									<option value="2024-11-15">November 15, 2024</option>
+									<option value="2024-11-22">November 22, 2024</option>
+									<option value="2024-11-29">November 29, 2024</option>
+									<option value="2024-12-06">December 6, 2024</option>
+									<option value="2024-12-13">December 13, 2024</option>
+								</select>
+							</label>
+							<label>
+								Expected Number of Attendees
+								<select name="attendees" required>
+									<option value="" disabled selected>How many will attend?</option>
+									<option value="1">Just me</option>
+									<option value="2">2 people</option>
+									<option value="3-5">3-5 people</option>
+									<option value="6+">6 or more</option>
+								</select>
+							</label>
+						</div>
+						<div class="form-row">
+							<label>
+								Your Name
+								<input type="text" name="name" required />
+							</label>
+							<label>
+								Contact Number
+								<input type="tel" name="phone" required />
+							</label>
+						</div>
+						<div class="form-actions">
+							<button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+							<button type="submit" class="btn btn-primary">Submit Request</button>
+						</div>
+					</form>
 				</div>
-				<div class="workshop-grid">
-					<article class="workshop-card">
-						<img src="./assets/toddlers.png" />
-						<p>Build routines with kindness, manage big feelings, and create safe boundaries for little explorers.</p>
-						<ul>
-							<li>Playful role play &amp; songs</li>
-							<li>Positive routines toolkit</li>
-							<li>Parent support circle</li>
-						</ul>
-					</article>
-					<article class="workshop-card">
-						<img src="./assets/children.png" />
-						<p>Encourage responsibility, cooperation, and problem-solving through respectful leadership.</p>
-						<ul>
-							<li>Collaborative family meetings</li>
-							<li>Kind &amp; firm communication</li>
-							<li>Connection-based discipline</li>
-						</ul>
-					</article>
-					<article class="workshop-card">
-						<img src="./assets/teens.png" />
-						<p>Navigate independence with empathy, shared agreements, and tools for calm conversations.</p>
-						<ul>
-							<li>Coaching mindset for parents</li>
-							<li>Mutual respect agreements</li>
-							<li>Future-ready resilience skills</li>
-						</ul>
-					</article>
+			</div>
+
+			<div id="school-workshop-modal" class="modal-overlay">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>School Workshop Inquiry</h3>
+						<button class="modal-close" aria-label="Close modal">&times;</button>
+					</div>
+					<form class="modal-form" id="school-workshop-form">
+						<div class="form-row">
+							<label>
+								Contact Number
+								<input type="tel" name="phone" required />
+							</label>
+							<label>
+								Contact Email
+								<input type="email" name="email" required />
+							</label>
+						</div>
+						<div class="form-row full-width">
+							<label>
+								School Name
+								<input type="text" name="school" required />
+							</label>
+						</div>
+						<div class="form-row full-width">
+							<label>
+								Additional Information
+								<textarea name="message" rows="4" placeholder="Tell us about your school's needs, preferred dates, expected number of parents, etc."></textarea>
+							</label>
+						</div>
+						<div class="form-actions">
+							<button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+							<button type="submit" class="btn btn-primary">Submit Inquiry</button>
+						</div>
+					</form>
 				</div>
-			</section>
+			</div>
 
 			<section id="contact" class="section contact">
 				<div class="contact-card">

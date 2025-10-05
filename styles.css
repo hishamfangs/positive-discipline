@@ -261,8 +261,9 @@ main {
 
 .section-heading p {
 	margin: 0 auto;
-	color: rgba(38, 70, 83, 0.75);
+	color: rgb(38 70 83);
 	font-weight: 600;
+	text-shadow: 0px 0px 120px white, 0px 0px 120px white, 0px 0px 80px white, 0px 0px 40px white, 0px 0px 20px white, 0px 0px 10px white;
 }
 
 .eyebrow {
@@ -561,32 +562,64 @@ main {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: radial-gradient(circle at 20% 20%, rgba(214, 236, 255, 0.65), transparent 60%),
-		radial-gradient(circle at 80% 80%, rgba(241, 246, 255, 0.7), transparent 65%);
+	/* background: radial-gradient(circle at 20% 20%, rgba(214, 236, 255, 0.65), transparent 60%),
+		radial-gradient(circle at 80% 80%, rgba(241, 246, 255, 0.7), transparent 65%); */
 	z-index: -1;
 }
 
 .workshop-grid {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: clamp(1.5rem, 4vw, 2.4rem);
-	max-width: 1600px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: clamp(2rem, 4vw, 3rem);
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 clamp(1.5rem, 5vw, 2.5rem);
 }
 
 .workshop-card {
-	/* background: rgb(255 255 255 / 21%); */
+	background: rgba(255, 255, 255, 0.92);
 	border-radius: var(--radius-md);
-	padding: clamp(1.8rem, 4vw, 2.4rem);
-	/* box-shadow: var(--shadow-soft); */
-	/* border: 2px solid rgba(31, 138, 137, 0.08); */
+	padding: clamp(2rem, 4vw, 2.8rem);
+	box-shadow: var(--shadow-soft);
+	border: 2px solid rgba(31, 138, 137, 0.08);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center 0px;
+	background-image: url(/assets/school-workshops.png);
+}
+
+.workshop-card:first-child {
+	background: rgba(255, 255, 255, 0.92);
+	border-radius: var(--radius-md);
+	padding: clamp(2rem, 4vw, 2.8rem);
+	box-shadow: var(--shadow-soft);
+	border: 2px solid rgba(31, 138, 137, 0.08);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+	position: relative;
+	background-image: url(/assets/parenting-workshops.png);
+	background-repeat: no-repeat;
+	background-position: center -53px;
 }
 
 .workshop-card:hover {
 	transform: translateY(-6px);
 	box-shadow: 0 26px 44px rgba(31, 138, 137, 0.22);
+}
+
+.workshop-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+}
+
+.workshop-cta {
+	margin-top: 1.5rem;
+	width: 100%;
+	justify-content: center;
 }
 
 .workshop-card h3 {
@@ -833,6 +866,164 @@ main {
 #illustration {
 	position: relative;
 	z-index: -1;
+}
+
+/* Modal Styles */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(38, 70, 83, 0.8);
+	backdrop-filter: blur(4px);
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal-content {
+	background: #fff;
+	border-radius: var(--radius-lg);
+	box-shadow: 0 20px 60px rgba(38, 70, 83, 0.3);
+	max-width: 600px;
+	width: 100%;
+	max-height: 90vh;
+	overflow-y: auto;
+	transform: translateY(20px);
+	transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+	transform: translateY(0);
+}
+
+.modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 2rem 1rem;
+	border-bottom: 1px solid rgba(31, 138, 137, 0.15);
+}
+
+.modal-header h3 {
+	margin: 0;
+	font-size: 1.5rem;
+	color: var(--clr-teal-dark);
+}
+
+.modal-close {
+	background: none;
+	border: none;
+	font-size: 2rem;
+	color: rgba(38, 70, 83, 0.6);
+	cursor: pointer;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-close:hover {
+	background: rgba(31, 138, 137, 0.1);
+	color: var(--clr-teal-dark);
+}
+
+.modal-form {
+	padding: 2rem;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.2rem;
+	margin-bottom: 1.2rem;
+}
+
+.form-row.full-width {
+	grid-template-columns: 1fr;
+}
+
+.form-row label {
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+	color: rgba(38, 70, 83, 0.8);
+	font-size: 0.95rem;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+	margin-top: 0.5rem;
+	border-radius: var(--radius-sm);
+	border: 1px solid rgba(31, 138, 137, 0.25);
+	padding: 0.75rem 1rem;
+	font: inherit;
+	background: rgba(255, 255, 255, 0.95);
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+	outline: none;
+	border-color: var(--clr-teal);
+	box-shadow: 0 0 0 4px rgba(31, 138, 137, 0.15);
+}
+
+.form-actions {
+	display: flex;
+	gap: 1rem;
+	justify-content: flex-end;
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid rgba(31, 138, 137, 0.15);
+}
+
+.modal-cancel {
+	background: rgba(38, 70, 83, 0.08);
+	color: rgba(38, 70, 83, 0.8);
+	border: 1px solid rgba(38, 70, 83, 0.2);
+}
+
+.modal-cancel:hover {
+	background: rgba(38, 70, 83, 0.15);
+}
+
+@media (max-width: 768px) {
+	.modal-content {
+		margin: 1rem;
+		max-height: calc(100vh - 2rem);
+	}
+
+	.modal-header,
+	.modal-form {
+		padding: 1.5rem;
+	}
+
+	.form-row {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.form-actions {
+		flex-direction: column;
+	}
 }
 
 .mother-image {
