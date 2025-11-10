@@ -11,11 +11,13 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css" />
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
 		<header class="site-header" aria-label="Main navigation">
-			<div class="brand"></div>
+									<img src="./assets/logo.png" class="logo" style="" />
+<div class="brand"></div>
 			<button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav">
 				<span></span>
 				<span></span>
@@ -25,6 +27,7 @@
 			<nav id="primaryNav" class="site-nav">
 				<ul>
 					<li><a href="#workshops">Workshops</a></li>
+					<li><a href="#school-workshops">Workshops @ School</a></li>
 					<li><a href="#about">About Nagwa</a></li>
 					<li><a href="#testimonials">Testimonials</a></li>
 				</ul>
@@ -34,9 +37,8 @@
 
 		<main>
 			<section id="hero" class="hero">
-				<div class="hero-content" style="/* display: inline-block; */">
+				<div class="hero-content-container" style="/* display: inline-block; */">
 					<div style="width: 100%; display: inline-block">
-						<img src="./assets/logo.png" class="logo" style="" />
 						<div class="hero-content" style="/* width: 400px; */">
 							<p class="hero-kicker">The Art of Kind and Firm</p>
 							<p>
@@ -45,15 +47,15 @@
 								You read the books. <br />You know all the buzzwords, yet you feel more lost than ever? <br /><br />I invite you to explore Positive Discipline
 								with me.<br /> It's been tried.<br /> It's been tested.<br />And it's proven it's success with thousands
 								of families. <br /></br />
-								<span style="font-weight: 600;">What Can You Expect?</span> <br />Interactive, informative, and eye opening workshops, where you are given science based tools in in a setup of like minded
-								parents. <br />Our aim is the same. I believe with some support, we can all make leaps in our relationships with our children.
+								<p style="font-weight: 600;">What Can You Expect?</p> Interactive, informative, and eye opening workshops, where you are given science based tools to explore and practice in a setup of like minded
+								parents. <br />Our aim is the same. I believe with some support, we can all make leaps in our relationships with our children, and with that, inevitabely, a more harmoneous, cooperative home.
 								<!-- Join educator <strong>Nagwa El Saadani</strong> for uplifting, evidence-based Positive Discipline sessions that empower families with respect, connection, and joyful cooperation.
 								families with respect, connection, and joyful cooperation. -->
 							</p>
 						</div>
 						<div class="hero-actions">
-							<a class="btn btn-primary" href="#contact">Reserve your spot</a>
-							<a class="btn btn-secondary" href="#workshops">Explore workshops</a>
+							<a class="btn btn-primary" href="#workshops">Parent Workshops</a>
+							<a class="btn btn-secondary" href="#contact">School Workshops</a>
 						</div>
 						<dl class="hero-highlights">
 							<div>
@@ -70,23 +72,47 @@
 							</div>
 						</dl>
 					</div>
-					<img src="./assets/mother.png" class="mother-image" />
+					<!-- <img src="./assets/mother.png" class="mother-image" /> -->
 				</div>
 				<div class="hero-illustration" aria-hidden="true">
 					<div class="map-card">
 						<div class="map-gradient"></div>
-						<div
-							class="map-gradient second"
-							style="
-								width: 90%;
-								height: 90%;
-								margin: auto;
-								background: url(/assets/photo.jpg);
-								border-radius: 14px;
-								background-size: cover;
-								background-position: center;
-							"
-						></div>
+						<div class="image-slider">
+							<div class="slider-container">
+								<div class="slide active">
+									<video autoplay muted loop>
+										<source src="https://positivedisciplinedxb.com/wp-content/uploads/2024/02/conference-1.mp4" type="video/mp4">
+									</video>
+								</div>
+								<div class="slide">
+									<img src="./assets/photo3.jpg" alt="Workshop Photo 3" />
+								</div>
+								<div class="slide">
+									<img src="./assets/photo1.jpg" alt="Workshop Photo 1" />
+								</div>
+
+
+								<div class="slide">
+									<img src="./assets/photo4.jpg" alt="Workshop Photo 4" />
+								</div>
+								<div class="slide">
+									<img src="./assets/photo5.jpg" alt="Workshop Photo 5" />
+								</div>
+								<div class="slide">
+									<img src="./assets/photo2.jpg" alt="Workshop Photo 2" />
+								</div>
+							</div>
+							<button class="slider-nav slider-prev" aria-label="Previous slide">‹</button>
+							<button class="slider-nav slider-next" aria-label="Next slide">›</button>
+							<div class="slider-dots">
+								<button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
+								<button class="dot" data-slide="1" aria-label="Go to slide 2"></button>
+								<button class="dot" data-slide="2" aria-label="Go to slide 3"></button>
+								<button class="dot" data-slide="3" aria-label="Go to slide 4"></button>
+								<button class="dot" data-slide="4" aria-label="Go to slide 5"></button>
+								<button class="dot" data-slide="5" aria-label="Go to slide 6"></button>
+							</div>
+						</div>
 						<div class="map-cloud map-cloud--one"></div>
 						<div class="map-cloud map-cloud--two"></div>
 						<div class="map-pin map-pin--dubai">
@@ -97,34 +123,78 @@
 						</div>
 						<div class="map-heart">♥</div>
 					</div>
-					<div class="hero-bubble hero-bubble--one">Joyful connections</div>
-					<div class="hero-bubble hero-bubble--two">Kind &amp; firm</div>
-					<div class="hero-bubble hero-bubble--three">Community matters</div>
+					<div class="hero-bubble hero-bubble--one" data-parallax-speed="0.35">Joyful connections</div>
+					<div class="hero-bubble hero-bubble--two" data-parallax-speed="0.25">Kind &amp; firm</div>
+					<div class="hero-bubble hero-bubble--three" data-parallax-speed="0.3">Community matters</div>
+					<div class="hero-bubble hero-bubble--two hero-bubble--four" data-parallax-speed="0.25">Kind &amp; firm</div>
 				</div>
 			</section>
 
 
 			<section id="workshops" class="section workshops">
 				<div class="section-heading">
-					<p class="eyebrow">Workshop Options</p>
 					<h2>Workshops</h2>
-					<p>Choose the workshop format that works best for your family and schedule.</p>
+					<p></p>
 				</div>
 				<div class="workshop-grid">
-					<article class="workshop-card" data-workshop="parenting-workshops">
+					<article class="workshop-card parenting" data-workshop="parenting-workshops">
 						<div class="workshop-icon">
 							
 						</div>
 						<h3>Parenting Workshops</h3>
-						<p>Get introduced to Positive Discipline principles through our complimentary introductory sessions. Perfect for parents new to the approach who want to experience our teaching style and community.</p>
-						<ul>
-							<li>Overview of Positive Discipline fundamentals</li>
-							<li>Basic tools and strategies</li>
-							<li>Meet other like-minded parents</li>
-							<li>No cost - just your time and commitment</li>
-						</ul>
-						<button class="btn btn-primary workshop-cta">Book Free Workshop</button>
+						
+						<!-- <div class="et_pb_text_inner"><p style="text-align: center;"><strong>The Workshops include:</strong></p>
+								<p style="text-align: center;">4 x Positive Discipline Workshops<br>1 x Positive Discipline Book (Digital)<br>1 x PD Parent Workbook (Digital)</p>
+								<p style="text-align: center;">(June 2025 workshop registration closed)</p></div> -->
+								<div class="et_pb_blurb_container">
+						
+									<div class="et_pb_blurb_description" style="
+									font-weight: 600;
+							">
+							<div>Connection is the antidote to Chaos. Arm yourself with knowledge to lead more confidently and calmly</div>	
+							<ul>
+								<li><div>Positive Discipline fundamentals
+									<ul>
+										<li>Why Positive Discipline? Behavioural Studies & Parenting Styles<br /></li>
+										<li>Brain Functions & Tantrums</li>
+										<li>Temperament Traits</li>
+										<li>Stress Management Styles</li>
+										<li>The Mistaken Beliefs</li>
+										<li>Sibling Rivalry</li>
+										<li>Family Meetings</li>	
+									</ul>
+								</div></li>
+								<li>
+								<div>Parenting tools and strategies to Rewire Your Brain</div>
+								</li>
+								<li>
+									<div>Meet other like-minded parents</div>
+								</li>
+								<li>
+									<div>Interactive exercises & real-world problem solving: <br />
+										<ul>
+											<li>Experiential Activities</li>
+											<li>Parents Helping Parents</li>
+									</ul>
+								</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+						<div class="workshop-cta-container">
+						<button class="btn btn-primary workshop-cta" data-modal="egypt-workshop-modal">
+							<span class="btn-flag"><span class="fi fi-eg"></span></span>
+							Book Egypt Workshop
+						</button>
+						<button class="btn btn-primary workshop-cta" data-modal="dubai-workshop-modal">
+							<span class="btn-flag"><span class="fi fi-ae"></span></span>
+							Book Dubai Workshop
+						</button></div>
 					</article>
+					<div class="section-heading">
+						<h2 id="school-workshops">Parenting Workshops at Your School</h2>
+					</div>
+					
 					<!-- <article class="workshop-card" data-workshop="free-intro">
 						<div class="workshop-icon">
 							<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -144,31 +214,50 @@
 						</ul>
 						<button class="btn btn-primary workshop-cta">Book Free Workshop</button>
 					</article> -->
-					<article class="workshop-card" data-workshop="school-workshop">
-						<div class="workshop-icon">
-							
+					<div class="school-workshops">
+						<article class="workshop-card" data-workshop="school-workshop">
+							<div class="workshop-content">
+								<div class="workshop-icon">
+								</div>
+								<h3>1 hour introductory workshop</h3>
+								<p>This complimentary workshop helps schools strengthen parent support, align school–parent values for smoother collaboration, and provide interested parents the opportunity to enroll in our extended program.</p>
+								<ul>
+									<li>Overview of Positive Discipline fundamentals</li>
+									<li>One interactive exercise</li>
+									<li>Q&A</li>
+								</ul>
+	
+							</div>
+							<button class="btn btn-primary workshop-cta">Book Workshop</button>
+						</article>
+						<article class="workshop-card" data-workshop="school-workshop">
+							<div class="workshop-content">
+								<div class="workshop-icon">
+								</div>
+								<h3>Parent Workshops at Your School</h3>
+								<p>Bring Positive Discipline directly to your school community! We offer comprehensive parent workshops tailored to your school's needs, creating a consistent approach between home and school.</p>
+								<ul>
+									<li>Tailored Workshops</li>
+									<li>On-site at your school</li>
+								</ul>
+							</div>
+							<button class="btn btn-primary workshop-cta">Inquire for Your School</button>
+						</article>
 						</div>
-						<h3>Parent Workshops at Your School</h3>
-						<p>Bring Positive Discipline directly to your school community! We offer comprehensive parent workshops tailored to your school's needs, creating a consistent approach between home and school.</p>
-						<ul>
-							<li>Customized curriculum for your community</li>
-							<li>On-site delivery at your school</li>
-							<li>Multiple session formats available</li>
-							<li>Teacher collaboration opportunities</li>
-						</ul>
-						<button class="btn btn-primary workshop-cta">Inquire for Your School</button>
-					</article>
+					</div>
 				</div>
 			</section>
 			<section id="about" class="section about">
 				<div class="section-heading">
-					<p class="eyebrow">Meet Nagwa</p>
+					<!-- <p class="eyebrow">Meet Nagwa</p> -->
 					<h2>About Nagwa El Saadani</h2>
 					<p>
 						Nagwa is a certified Positive Discipline educator committed to helping parents nurture confident, cooperative children through playful learning and
 						compassionate leadership.
 					</p>
 				</div>
+				<section id="illustration" ><img src="./assets/nagwa-illustration2.png"></section>			
+		
 				<div class="about-grid">
 					<div class="about-card">
 						<div class="about-portrait" aria-hidden="true"></div>
@@ -180,85 +269,275 @@
 						</ul>
 					</div>
 					<div class="about-story">
-						<h3>Warm, respectful guidance for the whole family</h3>
-						<p>
-							With more than a decade of experience, Nagwa blends evidence-based tools with heartfelt facilitation. Her sessions invite laughter, reflection,
-							and practical strategies so every parent leaves feeling supported and confident.
-						</p>
+						<!-- <h3>Warm, respectful guidance for the whole family</h3> -->
+					
+							<blockquote>“I am an expat mom of 2 children, a boy and a girl,<br>and a certified positive discipline parent &amp; classroom educator.<br>I have seen both in my home and in my workshops how a change<br>in perspective, coupled with practical parenting tools can transform<br>family dynamics, and I am determined to share this knowledge<br>with as many families as I can.”</p></blockquote>
+						
 						<blockquote>
-							“When parents feel empowered, children flourish in connection and respect.”
 							<cite>&mdash; Nagwa El Saadani</cite>
 						</blockquote>
 					</div>
+
+				</div>
+				<div id="testimonials" class="section testimonials">
+					<div class="section-heading" style="opacity: 0; width: 40%;max-width: none;">
+						<p class="eyebrow">Kind words</p>
+						<h2>Families share their experience</h2>
+						<p>Parents leave feeling seen, supported, and ready to lead with love.</p>
+					</div>
+					<div id="testimonials-grid" class="testimonials-grid">
+						<div class="testimonial-grid">
+							<figure class="testimonial-card">
+								<blockquote>“Nagwa’s warmth and playfulness made every session engaging. Our home is calmer and more connected.”</blockquote>
+								<figcaption>— Sarah, mother of two</figcaption>
+							</figure>
+							<figure class="testimonial-card">
+								<blockquote>“These workshops gave us practical tools that respect our teen’s voice while keeping family values strong.”</blockquote>
+								<figcaption>— Ahmed &amp; Lina, parents of a teen</figcaption>
+							</figure>
+							<figure class="testimonial-card">
+								<blockquote>“I finally feel confident setting boundaries with kindness. The community support was priceless.”</blockquote>
+								<figcaption>— Mariam, toddler parent</figcaption>
+							</figure>
+							<figure class="testimonial-card">
+								<blockquote>“I finally feel confident setting boundaries with kindness. The community support was priceless.”</blockquote>
+								<figcaption>— Mariam, toddler parent</figcaption>
+							</figure>
+							<figure class="testimonial-card">
+								<blockquote>“I finally feel confident setting boundaries with kindness. The community support was priceless.”</blockquote>
+								<figcaption>— Mariam, toddler parent</figcaption>
+							</figure>
+							<figure class="testimonial-card">
+								<blockquote>“I finally feel confident setting boundaries with kindness. The community support was priceless.”</blockquote>
+								<figcaption>— Mariam, toddler parent</figcaption>
+							</figure>
+							<figure class="testimonial-card">
+								<blockquote>“I finally feel confident setting boundaries with kindness. The community support was priceless.”</blockquote>
+								<figcaption>— Mariam, toddler parent</figcaption>
+							</figure>
+						</div>
+					</div>
+
 				</div>
 			</section>
-			<section id="illustration" style="margin-top: -469px;margin-left: -65px"><img src="./assets/nagwa-illustration2.png"></section>			
-			<section id="testimonials" class="section testimonials">
-							<div class="section-heading" style="display: none;">
-								<p class="eyebrow">Kind words</p>
-								<h2>Families share their experience</h2>
-								<p>Parents leave feeling seen, supported, and ready to lead with love.</p>
-							</div>
-							<div class="testimonial-grid">
-								<figure class="testimonial-card">
-									<blockquote>“Nagwa’s warmth and playfulness made every session engaging. Our home is calmer and more connected.”</blockquote>
-									<figcaption>— Sarah, mother of two</figcaption>
-								</figure>
-								<figure class="testimonial-card">
-									<blockquote>“These workshops gave us practical tools that respect our teen’s voice while keeping family values strong.”</blockquote>
-									<figcaption>— Ahmed &amp; Lina, parents of a teen</figcaption>
-								</figure>
-								<figure class="testimonial-card">
-									<blockquote>“I finally feel confident setting boundaries with kindness. The community support was priceless.”</blockquote>
-									<figcaption>— Mariam, toddler parent</figcaption>
-								</figure>
-							</div>
-			</section>
+
 
 			<!-- Modal Forms -->
-			<div id="free-workshop-modal" class="modal-overlay">
+			<div id="egypt-workshop-modal" class="modal-overlay">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h3>Book Free Introductory Workshop</h3>
+						<h3>Book Egypt Workshop</h3>
 						<button class="modal-close" aria-label="Close modal">&times;</button>
 					</div>
-					<form class="modal-form" id="free-workshop-form">
-						<div class="form-row">
-							<label>
-								Select Preferred Date
-								<select name="date" required>
-									<option value="" disabled selected>Choose a date</option>
-									<option value="2024-11-15">November 15, 2024</option>
-									<option value="2024-11-22">November 22, 2024</option>
-									<option value="2024-11-29">November 29, 2024</option>
-									<option value="2024-12-06">December 6, 2024</option>
-									<option value="2024-12-13">December 13, 2024</option>
-								</select>
-							</label>
-							<label>
-								Expected Number of Attendees
-								<select name="attendees" required>
-									<option value="" disabled selected>How many will attend?</option>
-									<option value="1">Just me</option>
-									<option value="2">2 people</option>
-									<option value="3-5">3-5 people</option>
-									<option value="6+">6 or more</option>
-								</select>
-							</label>
-						</div>
-						<div class="form-row">
-							<label>
-								Your Name
-								<input type="text" name="name" required />
-							</label>
-							<label>
-								Contact Number
-								<input type="tel" name="phone" required />
-							</label>
+					<form class="modal-form" id="egypt-workshop-form">
+						<div class="form-content">
+							<div class="form-row">
+								<label>
+									Your Name
+									<input type="text" name="name" required />
+								</label>
+								<label>
+									Contact Number
+									<div class="phone-input-wrapper">
+										<div class="phone-input-container">
+											<button type="button" class="country-selector" aria-label="Select country" data-readonly="true">
+												<span class="country-flag" id="egypt-workshop-flag"><span class="fi fi-eg"></span></span>
+												<span class="country-code" id="egypt-workshop-code">+20</span>
+												<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</button>
+											<div class="country-dropdown" id="egypt-workshop-dropdown">
+												<button type="button" class="country-option" data-code="+20" data-flag="eg" data-country="Egypt">
+													<span class="country-flag"><span class="fi fi-eg"></span></span>
+													<span class="country-name">Egypt</span>
+													<span class="country-code">+20</span>
+												</button>
+												<button type="button" class="country-option" data-code="+971" data-flag="ae" data-country="UAE">
+													<span class="country-flag"><span class="fi fi-ae"></span></span>
+													<span class="country-name">UAE</span>
+													<span class="country-code">+971</span>
+												</button>
+											</div>
+											<input type="tel" name="phone" class="phone-number-input" id="egypt-workshop-phone" placeholder="XX XXXX XXXX" required />
+											<input type="hidden" name="country_code" id="egypt-workshop-country-code" value="+20" />
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="form-row">
+								<label>
+									Email
+									<input type="email" name="email" autocomplete="email" required />
+								</label>
+								<label>
+									Expected Number of Attendees
+									<div class="number-spinner-wrapper">
+										<button type="button" class="spinner-btn spinner-decrease" aria-label="Decrease">−</button>
+										<input type="number" name="attendees" class="number-spinner" value="1" min="1" max="20" required />
+										<button type="button" class="spinner-btn spinner-increase" aria-label="Increase">+</button>
+									</div>
+								</label>
+							</div>
+							<div class="form-row full-width">
+								<label>
+									Select Preferred Course
+									<div class="course-selector">
+										<label class="course-option">
+											<input type="radio" name="date" value="2024-11-15" required />
+											<div class="course-card">
+												<div class="course-day-type">Weekdays</div>
+												<div class="course-schedule">Wednesdays & Fridays</div>
+												<div class="course-date">November 15, 2025</div>
+											</div>
+										</label>
+										<label class="course-option">
+											<input type="radio" name="date" value="2024-11-22" required />
+											<div class="course-card">
+												<div class="course-day-type">Weekdays</div>
+												<div class="course-schedule">Wednesdays & Fridays</div>
+												<div class="course-date">November 22, 2025</div>
+											</div>
+										</label>
+										<label class="course-option">
+											<input type="radio" name="date" value="2024-11-29" required />
+											<div class="course-card">
+												<div class="course-day-type">Weekends</div>
+												<div class="course-schedule">Saturdays & Sundays</div>
+												<div class="course-date">November 29, 2025</div>
+											</div>
+										</label>
+										<label class="course-option">
+											<input type="radio" name="date" value="2024-12-13" required />
+											<div class="course-card">
+												<div class="course-day-type">Weekends</div>
+												<div class="course-schedule">Saturdays & Sundays</div>
+												<div class="course-date">December 13, 2025</div>
+											</div>
+										</label>
+									</div>
+								</label>
+							</div>
 						</div>
 						<div class="form-actions">
-							<button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
-							<button type="submit" class="btn btn-primary">Submit Request</button>
+							<div class="price-display">
+								<span class="price-label">Total Price:</span>
+								<span class="price-amount" id="egypt-price-egp">24,000 EGP</span>
+							</div>
+							<div class="form-actions-buttons">
+								<button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+								<button type="submit" class="btn btn-primary">Submit Request</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div id="dubai-workshop-modal" class="modal-overlay">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Book Dubai Workshop</h3>
+						<button class="modal-close" aria-label="Close modal">&times;</button>
+					</div>
+					<form class="modal-form" id="dubai-workshop-form">
+						<div class="form-content">
+							<div class="form-row">
+								<label>
+									Your Name
+									<input type="text" name="name" required />
+								</label>
+								<label>
+									Contact Number
+									<div class="phone-input-wrapper">
+										<div class="phone-input-container">
+											<button type="button" class="country-selector" aria-label="Select country" data-readonly="true">
+												<span class="country-flag" id="dubai-workshop-flag"><span class="fi fi-ae"></span></span>
+												<span class="country-code" id="dubai-workshop-code">+971</span>
+												<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</button>
+											<div class="country-dropdown" id="dubai-workshop-dropdown">
+												<button type="button" class="country-option" data-code="+20" data-flag="eg" data-country="Egypt">
+													<span class="country-flag"><span class="fi fi-eg"></span></span>
+													<span class="country-name">Egypt</span>
+													<span class="country-code">+20</span>
+												</button>
+												<button type="button" class="country-option" data-code="+971" data-flag="ae" data-country="UAE">
+													<span class="country-flag"><span class="fi fi-ae"></span></span>
+													<span class="country-name">UAE</span>
+													<span class="country-code">+971</span>
+												</button>
+											</div>
+											<input type="tel" name="phone" class="phone-number-input" id="dubai-workshop-phone" placeholder="XX XXX XXXX" required />
+											<input type="hidden" name="country_code" id="dubai-workshop-country-code" value="+971" />
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="form-row">
+								<label>
+									Email
+									<input type="email" name="email" autocomplete="email" required />
+								</label>
+								<label>
+									Expected Number of Attendees
+									<div class="number-spinner-wrapper">
+										<button type="button" class="spinner-btn spinner-decrease" aria-label="Decrease">−</button>
+										<input type="number" name="attendees" class="number-spinner" value="1" min="1" max="20" required />
+										<button type="button" class="spinner-btn spinner-increase" aria-label="Increase">+</button>
+									</div>
+								</label>
+							</div>
+							<div class="form-row full-width">
+								<label>
+									Select Preferred Course
+									<div class="course-selector">
+										<label class="course-option">
+											<input type="radio" name="date" value="2024-11-15" required />
+											<div class="course-card">
+												<div class="course-day-type">Weekdays</div>
+												<div class="course-schedule">Wednesdays & Fridays</div>
+												<div class="course-date">November 15, 2025</div>
+											</div>
+										</label>
+										<label class="course-option">
+											<input type="radio" name="date" value="2024-11-22" required />
+											<div class="course-card">
+												<div class="course-day-type">Weekdays</div>
+												<div class="course-schedule">Wednesdays & Fridays</div>
+												<div class="course-date">November 22, 2025</div>
+											</div>
+										</label>
+										<label class="course-option">
+											<input type="radio" name="date" value="2024-11-29" required />
+											<div class="course-card">
+												<div class="course-day-type">Weekends</div>
+												<div class="course-schedule">Saturdays & Sundays</div>
+												<div class="course-date">November 29, 2025</div>
+											</div>
+										</label>
+										<label class="course-option">
+											<input type="radio" name="date" value="2024-12-13" required />
+											<div class="course-card">
+												<div class="course-day-type">Weekends</div>
+												<div class="course-schedule">Saturdays & Sundays</div>
+												<div class="course-date">December 13, 2025</div>
+											</div>
+										</label>
+									</div>
+								</label>
+							</div>
+						</div>
+						<div class="form-actions">
+							<div class="price-display">
+								<span class="price-label">Total Price:</span>
+								<span class="price-amount" id="dubai-price-aed">1,200 AED</span>
+							</div>
+							<div class="form-actions-buttons">
+								<button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+								<button type="submit" class="btn btn-primary">Submit Request</button>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -271,27 +550,53 @@
 						<button class="modal-close" aria-label="Close modal">&times;</button>
 					</div>
 					<form class="modal-form" id="school-workshop-form">
-						<div class="form-row">
-							<label>
-								Contact Number
-								<input type="tel" name="phone" required />
-							</label>
-							<label>
-								Contact Email
-								<input type="email" name="email" required />
-							</label>
-						</div>
-						<div class="form-row full-width">
-							<label>
-								School Name
-								<input type="text" name="school" required />
-							</label>
-						</div>
-						<div class="form-row full-width">
-							<label>
-								Additional Information
-								<textarea name="message" rows="4" placeholder="Tell us about your school's needs, preferred dates, expected number of parents, etc."></textarea>
-							</label>
+						<div class="form-content">
+							<div class="form-row">
+								<label>
+									Contact Number
+									<div class="phone-input-wrapper">
+										<div class="phone-input-container">
+											<button type="button" class="country-selector" aria-label="Select country">
+												<span class="country-flag" id="school-workshop-flag"><span class="fi fi-eg"></span></span>
+												<span class="country-code" id="school-workshop-code">+20</span>
+												<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</button>
+											<div class="country-dropdown" id="school-workshop-dropdown">
+												<button type="button" class="country-option" data-code="+20" data-flag="eg" data-country="Egypt">
+													<span class="country-flag"><span class="fi fi-eg"></span></span>
+													<span class="country-name">Egypt</span>
+													<span class="country-code">+20</span>
+												</button>
+												<button type="button" class="country-option" data-code="+971" data-flag="ae" data-country="UAE">
+													<span class="country-flag"><span class="fi fi-ae"></span></span>
+													<span class="country-name">UAE</span>
+													<span class="country-code">+971</span>
+												</button>
+											</div>
+											<input type="tel" name="phone" class="phone-number-input" id="school-workshop-phone" placeholder="XX XXXX XXXX" required />
+											<input type="hidden" name="country_code" id="school-workshop-country-code" value="+20" />
+										</div>
+									</div>
+								</label>
+								<label>
+									Contact Email
+									<input type="email" name="email" required />
+								</label>
+							</div>
+							<div class="form-row full-width">
+								<label>
+									School Name
+									<input type="text" name="school" required />
+								</label>
+							</div>
+							<div class="form-row full-width">
+								<label>
+									Additional Information
+									<textarea name="message" rows="4" placeholder="Tell us about your school's needs, preferred dates, expected number of parents, etc."></textarea>
+								</label>
+							</div>
 						</div>
 						<div class="form-actions">
 							<button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
@@ -308,10 +613,10 @@
 						<h2>Ready to join a Positive Discipline workshop?</h2>
 						<p>
 							Share a few details and we’ll reach out with schedules in Dubai and Cairo, or email
-							<a href="mailto:hello@positivedisciplinedxb.com">hello@positivedisciplinedxb.com</a> directly.
+							<a href="mailto:nagwa@positivedisciplinedxb.com">nagwa@positivedisciplinedxb.com</a> directly.
 						</p>
 					</div>
-					<form class="contact-form" action="#" method="post">
+					<form class="contact-form" id="contact-form" action="#" method="post">
 						<label>
 							Name
 							<input type="text" name="name" autocomplete="name" required />
@@ -344,6 +649,17 @@
 			<p>&copy; <span id="year"></span> Positive Discipline DXB · Crafted with care in Dubai &amp; Cairo.</p>
 		</footer>
 
+		<div class="lightbox-overlay" id="gallery-lightbox" aria-hidden="true">
+			<button class="lightbox-close" aria-label="Close image viewer">&times;</button>
+			<button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
+			<div class="lightbox-media">
+				<img src="" alt="" id="lightbox-image" />
+				<video id="lightbox-video" controls playsinline></video>
+			</div>
+			<button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
+		</div>
+
 		<script src="script.js"></script>
+		<script src="formHandler.js"></script>
 	</body>
 </html>
