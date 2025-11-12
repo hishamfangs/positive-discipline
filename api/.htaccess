@@ -1,0 +1,39 @@
+# API Directory Configuration
+
+# Enable CORS for all API endpoints
+<IfModule mod_headers.c>
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "POST, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, X-Requested-With"
+    Header always set Access-Control-Max-Age "86400"
+</IfModule>
+
+# Handle preflight OPTIONS requests
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule .* - [R=200,L]
+
+# Ensure PHP files are processed
+<IfModule mod_mime.c>
+    AddType application/x-httpd-php .php
+</IfModule>
+
+# Security - prevent direct access to config files
+<Files "*.config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Only allow POST requests to form handlers (except test file)
+<FilesMatch "^(egypt-workshop|dubai-workshop|school-workshop|contact)\.php$">
+    <RequireAll>
+        Require method POST
+    </RequireAll>
+</FilesMatch>
+
+# Allow GET requests for test file only
+<Files "test-email-config.php">
+    <RequireAll>
+        Require method GET
+    </RequireAll>
+</Files>

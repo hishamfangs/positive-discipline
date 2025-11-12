@@ -1,9 +1,9 @@
 (() => {
-  const API_ENDPOINT = '/api/forms/submit';
-
+  // Individual PHP endpoints for each form type
   const formsConfig = [
     {
       id: 'egypt-workshop-form',
+      endpoint: 'api/egypt-workshop.php',
       formType: 'egypt-workshop',
       formName: 'Egypt Workshop Booking',
       modalKey: 'egypt-workshop-modal',
@@ -35,6 +35,7 @@
     },
     {
       id: 'dubai-workshop-form',
+      endpoint: 'api/dubai-workshop.php',
       formType: 'dubai-workshop',
       formName: 'Dubai Workshop Booking',
       modalKey: 'dubai-workshop-modal',
@@ -66,6 +67,7 @@
     },
     {
       id: 'school-workshop-form',
+      endpoint: 'api/school-workshop.php',
       formType: 'school-workshop',
       formName: 'School Workshop Inquiry',
       modalKey: 'school-workshop',
@@ -94,6 +96,7 @@
     },
     {
       id: 'contact-form',
+      endpoint: 'api/contact.php',
       formType: 'contact',
       formName: 'Contact Form',
       successMessage: 'Thank you for reaching out! We will be in touch shortly.',
@@ -124,16 +127,17 @@
         const rawData = serializeForm(form);
         const transformedData = typeof config.transform === 'function' ? config.transform(rawData) : rawData;
 
-        const payload = {
-          formType: config.formType,
-          formName: config.formName,
-          data: transformedData
-        };
+        // Create FormData for PHP endpoints
+        const formData = new FormData();
+        Object.keys(transformedData).forEach(key => {
+          if (transformedData[key] !== undefined && transformedData[key] !== null) {
+            formData.append(key, transformedData[key]);
+          }
+        });
 
-        const response = await fetch(API_ENDPOINT, {
+        const response = await fetch(config.endpoint, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+          body: formData
         });
 
         if (!response.ok) {
