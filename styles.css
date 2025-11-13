@@ -27,7 +27,7 @@ body {
 	color: var(--clr-navy);
 	background: linear-gradient(180deg, #fdf5ee 0%, #f1f6ff 100%);
 	line-height: 1.7;
-	background: url(./assets/background.png);
+	background: url(./assets/background.jpg);
 	background-size: 100% auto;
 }
 
@@ -955,7 +955,7 @@ body.lightbox-open {
 	user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
-	margin-top: -9vh;
+	margin-top: -5vh;
 	padding-left: 40%;
 }
 
@@ -1163,8 +1163,8 @@ body.lightbox-open {
 }
 
 .contact-form {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	display: flex;
+	flex-direction: column;
 	gap: 1.2rem;
 }
 
@@ -1174,6 +1174,7 @@ body.lightbox-open {
 	font-weight: 600;
 	color: rgba(38, 70, 83, 0.8);
 	font-size: 0.95rem;
+	width: 100%;
 }
 
 .contact-form input,
@@ -1186,6 +1187,7 @@ body.lightbox-open {
 	font: inherit;
 	background: rgba(255, 255, 255, 0.95);
 	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	width: 100%;
 }
 
 .contact-form input:focus,
@@ -1197,14 +1199,12 @@ body.lightbox-open {
 }
 
 .contact-form textarea {
-	grid-column: span 2;
 	resize: vertical;
 	min-height: 140px;
 }
 
 .contact-form button {
-	grid-column: span 2;
-	justify-self: start;
+	align-self: stretch;
 }
 
 .site-footer {
@@ -1234,13 +1234,8 @@ body.lightbox-open {
 
 	.about-grid,
 	.workshop-grid,
-	.testimonial-grid,
-	.contact-form {
+	.testimonial-grid {
 		grid-template-columns: 1fr;
-	}
-
-	.contact-form button {
-		justify-self: stretch;
 	}
 }
 
@@ -1261,9 +1256,6 @@ body.lightbox-open {
 
 	.hero-bubble {
 		display: none;
-	}
-
-	.map-card {
 	}
 }
 .about-list {
@@ -1288,6 +1280,10 @@ body.lightbox-open {
 	z-index: -1;
 	transform: translate3d(0, 0, 0);
 	will-change: transform;
+	margin-top: -25vh;
+	transform: translate3d(0px, -131.944px, 0px);
+	position: absolute;
+	width: 47dvw;
 }
 
 .testimonial-grid {
@@ -1972,8 +1968,6 @@ article {
 }
 
 /* Phone Input Component Styles */
-.phone-input-wrapper {
-}
 
 .phone-input-container {
 	position: relative;
@@ -2265,12 +2259,25 @@ article {
 	width: 50%;
 }
 #illustration {
-	margin-top: -20vh;
+	margin-top: -25vh;
 	transform: translate3d(0px, -131.944px, 0px);
 	position: absolute;
 }
 
 @media (max-width: 768px) {
+	* {
+		line-height: normal;
+	}
+	p,
+	ul,
+	li,
+	blockquote {
+		font-size: 0.9rem;
+	}
+	button.btn,
+	button.btn span {
+		font-size: 0.8rem;
+	}
 	.site-header {
 		flex-wrap: wrap;
 	}
@@ -2324,7 +2331,7 @@ article {
 		gap: 2.5rem;
 		text-align: center;
 		height: auto;
-		padding: clamp(3rem, 10vw, 4.5rem) clamp(1.5rem, 6vw, 2.25rem);
+		padding: clamp(3rem, 10vw, 4.5rem) 30px;
 	}
 
 	.hero-content-container,
@@ -2351,7 +2358,9 @@ article {
 		position: absolute;
 		margin: 0 auto !important;
 		transform: none !important;
-		display: none;
+		/* display: none; */
+		margin-top: -10vh !important;
+		margin-left: -21vw !important;
 	}
 
 	.hero-bubble {
@@ -2359,11 +2368,13 @@ article {
 	}
 
 	.section {
-		padding-top: 0px;
+		padding: 0px 30px;
 	}
-
+	.section#instagram-feed {
+		padding: 120px 30px !important;
+	}
 	.workshop-grid {
-		padding: clamp(1.5rem, 6vw, 2.5rem) clamp(1rem, 6vw, 2rem);
+		padding: clamp(1.5rem, 6vw, 2.5rem) 0px;
 		align-items: stretch;
 		gap: 2rem;
 	}
@@ -2396,12 +2407,15 @@ article {
 	.testimonials {
 		flex-direction: column;
 		align-items: stretch;
+		padding: 0px !important;
+		width: calc(100% + 60px);
+		margin-left: -30px;
 	}
 
 	.testimonials-grid {
 		width: 100%;
 		margin: 0 auto;
-		padding: 2.5rem 0 3.5rem;
+		padding: 2.5rem 0;
 	}
 
 	.testimonial-grid {
@@ -2419,22 +2433,18 @@ article {
 	}
 
 	.contact-card {
-		padding: 20px;
+		padding: 30px;
 	}
 
-	.contact-form {
-		grid-template-columns: 1fr;
-	}
-
-	.contact-form textarea,
 	.contact-form button {
-		grid-column: span 1;
+		width: 100%;
 	}
 
 	.about-grid {
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
+		/* margin-top: 18dvh; */
 	}
 
 	.about-card,
@@ -2446,6 +2456,7 @@ article {
 
 	.about-card {
 		opacity: 1;
+		padding-left: 22dvw;
 	}
 
 	.form-row {
@@ -2466,8 +2477,6 @@ article {
 		width: 100%;
 	}
 
-	#illustration {
-	}
 	.workshop-card ul {
 		margin-left: 0px;
 	}
@@ -2478,6 +2487,7 @@ article {
 		padding: 20px;
 		/* display: none; */
 		width: 100% !important;
+		font-size: 0.7rem;
 	}
 	#testimonials .section-heading {
 		display: none !important;
@@ -2503,8 +2513,8 @@ article {
 	}
 
 	article:not(.workshop-card) {
-		padding-left: clamp(1rem, 6vw, 2rem);
-		padding-right: clamp(1rem, 6vw, 2rem);
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 
 	.image-slider {
@@ -2513,8 +2523,8 @@ article {
 	}
 
 	.testimonials-grid {
-		padding-left: 20px;
-		padding-right: 20px;
+		/* padding-left: 30px; */
+		/* padding-right: 30px; */
 	}
 
 	.modal-content {
@@ -2653,5 +2663,14 @@ input[type="submit"].loading:after {
 
 	.message-icon {
 		font-size: 1rem;
+	}
+
+	.section-heading h2 {
+		font-size: 1.5rem;
+	}
+	input,
+	textarea,
+	select {
+		width: 100% !important;
 	}
 }

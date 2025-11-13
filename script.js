@@ -844,15 +844,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTestimonialParallax();
   initTestimonialsDragScroll();
 
-  // Initialize phone input components
-  initPhoneInputs();
-  
-  // Initialize number spinners
-  initNumberSpinners();
-  
-  // Initialize price calculators
-  initPriceCalculators();
-  
   // Initialize Instagram feed
   //initRealInstagramFeed();
   
