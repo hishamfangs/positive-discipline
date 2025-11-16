@@ -32,8 +32,24 @@ function initWorkshopCarousel() {
   breadcrumbs.forEach((btn, index) => {
     btn.addEventListener('click', () => {
       showTopic(index);
+      updateAria(index);
+    });
+
+    // Keyboard activation for non-button elements
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        showTopic(index);
+        updateAria(index);
+      }
     });
   });
+
+  function updateAria(activeIndex) {
+    breadcrumbs.forEach((el, i) => {
+      el.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
+    });
+  }
 
   // Arrow navigation
   if (prevBtn) {
