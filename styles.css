@@ -2959,8 +2959,8 @@ input[type="submit"].loading:after {
 	}
 
 	.topic-content h4 {
-		font-size: 1.4rem;
-		margin-bottom: 1rem;
+		font-size: 1.2rem;
+		margin-bottom: 0.8rem;
 	}
 
 	.topic-description {
@@ -2968,9 +2968,13 @@ input[type="submit"].loading:after {
 		max-width: 100%;
 	}
 
+	.topic-description {
+		font-size: 1rem;
+		line-height: 1.2;
+	}
 	.detail-pill {
-		font-size: 0.8rem;
-		padding: 0.45rem 0.9rem;
+		font-size: 0.7rem;
+		padding: 0.4rem 0.8rem;
 	}
 
 	.topics-nav-btn {
