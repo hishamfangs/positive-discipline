@@ -1,0 +1,271 @@
+/* Scoped to the workshops component so it doesn’t mess with the rest of your site */
+.pd-workshops-carousel {
+	position: relative;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 3rem 1.5rem 4rem;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	color: #315055;
+}
+
+.pd-workshops-header {
+	text-align: center;
+	margin-bottom: 1.75rem;
+}
+
+.pd-title {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 0.75rem;
+	color: #274244;
+}
+
+.pd-subtitle {
+	font-size: 0.95rem;
+	max-width: 620px;
+	margin: 0 auto;
+	line-height: 1.6;
+	color: #57757a;
+}
+
+/* Pills / breadcrumbs */
+.pd-pills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-bottom: 1.5rem;
+}
+
+.pd-pill {
+	border-radius: 999px;
+	padding: 0.4rem 0.95rem;
+	border: 1px solid rgba(23, 116, 93, 0.3);
+	background: rgba(255, 255, 255, 0.7);
+	color: #176c5d;
+	font-size: 0.8rem;
+	letter-spacing: 0.02em;
+	cursor: pointer;
+	transition: all 0.25s ease;
+}
+
+.pd-pill.active,
+.pd-pill:hover {
+	background: #176c5d;
+	color: #fff;
+	border-color: #176c5d;
+}
+
+/* Carousel container — from CodePen but scoped */
+.pd-workshops-carousel .carousel-container {
+	width: 100%;
+	max-width: 1050px;
+	height: 360px;
+	position: relative;
+	perspective: 1000px;
+	margin: 0 auto;
+}
+
+/* Track */
+.pd-workshops-carousel .carousel-track {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Cards adapted from the CodePen */
+.pd-workshops-carousel .card {
+	position: absolute;
+	width: 320px;
+	height: 320px;
+	background: rgba(255, 255, 255, 0.94);
+	border-radius: 24px;
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	cursor: pointer;
+}
+
+.pd-workshops-carousel .card-inner {
+	padding: 1.25rem 1.4rem 1.3rem;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.card-title {
+	font-size: 1.1rem;
+	margin-bottom: 0.4rem;
+	color: #274244;
+}
+
+.card-intro {
+	font-size: 0.85rem;
+	margin-bottom: 0.7rem;
+	color: #657d81;
+}
+
+.card-list {
+	font-size: 0.8rem;
+	line-height: 1.5;
+	padding-left: 1.1rem;
+	color: #315055;
+}
+
+.card-list li + li {
+	margin-top: 0.25rem;
+}
+
+/* Position states from CodePen */
+.pd-workshops-carousel .card.center {
+	z-index: 10;
+	transform: scale(1.04) translateZ(0);
+}
+
+.pd-workshops-carousel .card.left-2 {
+	z-index: 1;
+	transform: translateX(-380px) scale(0.8) translateZ(-260px);
+	opacity: 0.5;
+}
+
+.pd-workshops-carousel .card.left-1 {
+	z-index: 5;
+	transform: translateX(-200px) scale(0.9) translateZ(-120px);
+	opacity: 0.8;
+}
+
+.pd-workshops-carousel .card.right-1 {
+	z-index: 5;
+	transform: translateX(200px) scale(0.9) translateZ(-120px);
+	opacity: 0.8;
+}
+
+.pd-workshops-carousel .card.right-2 {
+	z-index: 1;
+	transform: translateX(380px) scale(0.8) translateZ(-260px);
+	opacity: 0.5;
+}
+
+.pd-workshops-carousel .card.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Arrows (from CodePen, recolored) */
+.pd-workshops-carousel .nav-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(23, 108, 93, 0.8);
+	color: white;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 20;
+	transition: all 0.25s ease;
+	font-size: 1.3rem;
+	border: none;
+	outline: none;
+}
+
+.pd-workshops-carousel .nav-arrow:hover {
+	background: rgba(11, 82, 70, 0.9);
+	transform: translateY(-50%) scale(1.05);
+}
+
+.pd-workshops-carousel .nav-arrow.left {
+	left: 4px;
+}
+
+.pd-workshops-carousel .nav-arrow.right {
+	right: 4px;
+}
+
+/* Active section text (from CodePen) */
+.pd-workshops-carousel .member-info {
+	text-align: center;
+	margin-top: 2.25rem;
+	transition: all 0.5s ease-out;
+}
+
+.pd-workshops-carousel .member-name {
+	color: #274244;
+	font-size: 1.3rem;
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+}
+
+.pd-workshops-carousel .member-role {
+	color: #7b969b;
+	font-size: 0.9rem;
+}
+
+/* Dots as mini breadcrumbs */
+.pd-workshops-carousel .dots {
+	display: flex;
+	justify-content: center;
+	gap: 0.55rem;
+	margin-top: 1.1rem;
+	flex-wrap: wrap;
+}
+
+.pd-workshops-carousel .dot {
+	padding: 0.25rem 0.7rem;
+	font-size: 0.75rem;
+	border-radius: 999px;
+	border: 1px solid rgba(23, 108, 93, 0.18);
+	background: rgba(255, 255, 255, 0.8);
+	color: #426b6f;
+	cursor: pointer;
+	transition: all 0.25s ease;
+}
+
+.pd-workshops-carousel .dot.active {
+	background: #f28d6a;
+	border-color: #f28d6a;
+	color: #fff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+	.pd-workshops-carousel .card {
+		width: 280px;
+		height: 320px;
+	}
+
+	.pd-workshops-carousel .card.left-2 {
+		transform: translateX(-260px) scale(0.8) translateZ(-240px);
+	}
+
+	.pd-workshops-carousel .card.right-2 {
+		transform: translateX(260px) scale(0.8) translateZ(-240px);
+	}
+}
+
+@media (max-width: 640px) {
+	.pd-title {
+		font-size: 1.5rem;
+	}
+
+	.pd-workshops-carousel .carousel-container {
+		height: 340px;
+	}
+
+	.pd-workshops-carousel .card {
+		width: 260px;
+		height: 320px;
+	}
+
+	.pd-workshops-carousel .nav-arrow {
+		display: none; /* swiping + dots are enough on mobile */
+	}
+}
