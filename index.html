@@ -13,7 +13,6 @@
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/css/flag-icons.min.css" />
 		<link rel="stylesheet" href="styles.css" />
-		<script src="https://www.google.com/recaptcha/api.js?render=6LeiqTQsAAAAALQgBODGUCEKaxV7NEIx3QsnA3Wm"></script>
 	</head>
 	<body>
 		<header class="site-header" aria-label="Main navigation">
@@ -803,7 +802,12 @@ My mission is to help families discover that true change happens when we <strong
 						</p>
 					</div>
 					<form class="contact-form" id="contact-form" action="#" method="post">
-						<input type="hidden" name="recaptcha_token" id="recaptcha-token" />
+						<!-- Honeypot field - hidden from humans, bots will fill it -->
+						<div style="position: absolute; left: -9999px;" aria-hidden="true">
+							<label>Leave this field empty
+								<input type="text" name="website_url" tabindex="-1" autocomplete="off" />
+							</label>
+						</div>
 						<label>
 							Name
 							<input type="text" name="name" autocomplete="name" required />
@@ -838,6 +842,6 @@ My mission is to help families discover that true change happens when we <strong
 
 		<script src="script.js"></script>
 		<script src="workshop-carousel.js"></script>
-		<script src="formHandler.js"></script>
+		<script src="formHandler.js?v=honeypot"></script>
 	</body>
 </html>

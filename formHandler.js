@@ -100,8 +100,7 @@
       formType: 'contact',
       formName: 'Contact Form',
       successMessage: 'Thank you for reaching out! We will be in touch shortly.',
-      useRecaptcha: true,
-      recaptchaSiteKey: '6LeiqTQsAAAAALQgBODGUCEKaxV7NEIx3QsnA3Wm',
+      useHoneypot: true,
       transform: (data) => ({
         ...data,
         submittedAt: new Date().toISOString(),
@@ -126,22 +125,24 @@
       toggleButtonState(submitButton, true, 'Sending…');
 
       try {
-        // Get reCAPTCHA token if enabled for this form
-        if (config.useRecaptcha && config.recaptchaSiteKey && typeof grecaptcha !== 'undefined') {
-          try {
-            const token = await grecaptcha.execute(config.recaptchaSiteKey, { action: 'contact_form' });
-            const tokenInput = form.querySelector('#recaptcha-token');
-            if (tokenInput) {
-              tokenInput.value = token;
-            }
-          } catch (recaptchaError) {
-            console.error('reCAPTCHA error:', recaptchaError);
-            throw new Error('Security verification failed. Please refresh the page and try again.');
+        // Check honeypot field if enabled (bot detection)
+        if (config.useHoneypot) {
+          const honeypotField = form.querySelector('input[name="website_url"]');
+          if (honeypotField && honeypotField.value) {
+            // Bot detected - silently fail with fake success
+            console.log('Honeypot triggered');
+            alert(config.successMessage);
+            form.reset();
+            toggleButtonState(submitButton, false, originalButtonText);
+            return;
           }
         }
 
         const rawData = serializeForm(form);
         const transformedData = typeof config.transform === 'function' ? config.transform(rawData) : rawData;
+
+        // Remove honeypot field from data
+        delete transformedData.website_url;
 
         // Create FormData for PHP endpoints
         const formData = new FormData();
