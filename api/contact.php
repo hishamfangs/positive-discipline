@@ -1,9 +1,49 @@
 <?php
 require_once '../config/email-config.php';
 
+// reCAPTCHA v3 configuration
+define('RECAPTCHA_SECRET_KEY', '6LeiqTQsAAAAAB3GXYTRDzvtpDqiGAYe-k2hKTkI');
+define('RECAPTCHA_SCORE_THRESHOLD', 0.5);
+
 // Validate POST request
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     jsonResponse(false, 'Invalid request method');
+}
+
+// Verify reCAPTCHA token
+$recaptchaToken = $_POST['recaptcha_token'] ?? '';
+if (empty($recaptchaToken)) {
+    jsonResponse(false, 'Security verification failed. Please try again.');
+}
+
+$recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
+$recaptchaData = [
+    'secret' => RECAPTCHA_SECRET_KEY,
+    'response' => $recaptchaToken,
+    'remoteip' => $_SERVER['REMOTE_ADDR'] ?? ''
+];
+
+$recaptchaOptions = [
+    'http' => [
+        'method' => 'POST',
+        'header' => 'Content-Type: application/x-www-form-urlencoded',
+        'content' => http_build_query($recaptchaData)
+    ]
+];
+
+$recaptchaContext = stream_context_create($recaptchaOptions);
+$recaptchaResponse = @file_get_contents($recaptchaUrl, false, $recaptchaContext);
+
+if ($recaptchaResponse === false) {
+    error_log('reCAPTCHA verification request failed');
+    jsonResponse(false, 'Security verification failed. Please try again.');
+}
+
+$recaptchaResult = json_decode($recaptchaResponse, true);
+
+if (!$recaptchaResult['success'] || $recaptchaResult['score'] < RECAPTCHA_SCORE_THRESHOLD) {
+    error_log('reCAPTCHA verification failed: ' . json_encode($recaptchaResult));
+    jsonResponse(false, 'Security verification failed. Please try again.');
 }
 
 // Get and clean form data
