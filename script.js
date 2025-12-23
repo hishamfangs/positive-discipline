@@ -589,8 +589,12 @@ class ImageSlider {
     this.isTransitioning = true;
     
     // Hide current slide and dot
-    this.slides[this.currentSlide].classList.remove('active');
-    this.dots[this.currentSlide].classList.remove('active');
+    if (this.slides[this.currentSlide]) {
+      this.slides[this.currentSlide].classList.remove('active');
+    }
+    if (this.dots[this.currentSlide]) {
+      this.dots[this.currentSlide].classList.remove('active');
+    }
     
     // Update current slide index
     this.currentSlide = index;
@@ -603,8 +607,12 @@ class ImageSlider {
     }
     
     // Show new slide and dot
-    this.slides[this.currentSlide].classList.add('active');
-    this.dots[this.currentSlide].classList.add('active');
+    if (this.slides[this.currentSlide]) {
+      this.slides[this.currentSlide].classList.add('active');
+    }
+    if (this.dots[this.currentSlide]) {
+      this.dots[this.currentSlide].classList.add('active');
+    }
     
     // Update video playback
     this.updateVideoPlayback();
