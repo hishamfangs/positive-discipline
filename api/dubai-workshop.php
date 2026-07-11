@@ -11,6 +11,7 @@ $email = clean($_POST['email'] ?? '');
 $phone = clean($_POST['phone'] ?? '');
 $countryCode = clean($_POST['country_code'] ?? '+971');
 $attendees = (int)($_POST['attendees'] ?? 1);
+$date = clean($_POST['date'] ?? '');
 
 // Validate
 if (empty($name) || empty($email) || empty($phone)) {
@@ -38,6 +39,7 @@ $adminContent = "
     <tr><th>Attendees Interested</th><td>{$attendees} " . ($attendees > 1 ? 'people' : 'person') . "</td></tr>
     <tr><th>Workshop Status</th><td>{$workshopStatus}</td></tr>
     <tr><th>Submitted</th><td>" . date('F j, Y \a\t g:i A') . "</td></tr>
+    <tr><th>Preferred Date</th><td>{$date}</td></tr>
 </table>
 
 <div class='highlight'>
@@ -62,6 +64,7 @@ $userContent = "
     <tr><th>Workshop</th><td>Dubai Positive Discipline Workshop</td></tr>
     <tr><th>Attendees Registered</th><td>{$attendees} " . ($attendees > 1 ? 'people' : 'person') . "</td></tr>
     <tr><th>Status</th><td>{$workshopStatus}</td></tr>
+    <tr><th>Preferred Date</th><td>{$date}</td></tr>
 </table>
 
 <div class='highlight'>
